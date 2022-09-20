@@ -1,0 +1,39 @@
+2022-09-20 17:06:10,658 - app.py[line:163] - INFO: AI handle
+2022-09-20 17:06:10,659 - app.py[line:173] - INFO: {'好': 0, '乐': 0, '哀': 0, '怒': 0, '惧': 0, '恶': 0, '惊': 0}
+2022-09-20 17:06:10,660 - app.py[line:65] - INFO: AI upload
+2022-09-20 17:06:10,661 - app.py[line:103] - ERROR: Ai error: Attempt to convert a value (None) with an unsupported type (<class 'NoneType'>) to a Tensor.
+2022-09-20 17:06:10,661 - app.py[line:180] - INFO: None
+2022-09-20 17:06:10,662 - app.py[line:189] - ERROR: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2022-09-20 17:06:11,260 - app.py[line:143] - INFO: submit
+2022-09-20 17:06:11,261 - app.py[line:59] - ERROR: download failed
+2022-09-20 17:06:11,261 - app.py[line:60] - ERROR: <urlopen error unknown url type: {"data">
+2022-09-20 17:06:11,261 - app.py[line:147] - INFO: None
+2022-09-20 17:06:11,262 - app.py[line:151] - INFO: xhchc
+2022-09-20 17:06:11,394 - app.py[line:163] - INFO: AI handle
+2022-09-20 17:06:11,395 - app.py[line:173] - INFO: {'好': 0, '乐': 0, '哀': 0, '怒': 0, '惧': 0, '恶': 0, '惊': 0}
+2022-09-20 17:06:11,395 - app.py[line:65] - INFO: AI upload
+2022-09-20 17:06:11,396 - app.py[line:103] - ERROR: Ai error: Attempt to convert a value (None) with an unsupported type (<class 'NoneType'>) to a Tensor.
+2022-09-20 17:06:11,397 - app.py[line:180] - INFO: None
+2022-09-20 17:06:11,398 - app.py[line:189] - ERROR: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2022-09-20 17:11:09,022 - app.py[line:143] - INFO: submit
+2022-09-20 17:11:09,023 - app.py[line:59] - ERROR: download failed
+2022-09-20 17:11:09,023 - app.py[line:60] - ERROR: <urlopen error unknown url type: {"data">
+2022-09-20 17:11:09,024 - app.py[line:147] - INFO: None
+2022-09-20 17:11:09,024 - app.py[line:151] - INFO: fnxjgx
+2022-09-20 17:11:09,160 - app.py[line:163] - INFO: AI handle
+2022-09-20 17:11:09,161 - app.py[line:173] - INFO: {'好': 0, '乐': 0, '哀': 0, '怒': 0, '惧': 0, '恶': 0, '惊': 0}
+2022-09-20 17:11:09,162 - app.py[line:65] - INFO: AI upload
+2022-09-20 17:11:09,162 - app.py[line:103] - ERROR: Ai error: Attempt to convert a value (None) with an unsupported type (<class 'NoneType'>) to a Tensor.
+2022-09-20 17:11:09,163 - app.py[line:180] - INFO: None
+2022-09-20 17:11:09,164 - app.py[line:189] - ERROR: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2022-09-20 17:11:10,098 - app.py[line:143] - INFO: submit
+2022-09-20 17:11:10,099 - app.py[line:59] - ERROR: download failed
+2022-09-20 17:11:10,099 - app.py[line:60] - ERROR: <urlopen error unknown url type: {"data">
+2022-09-20 17:11:10,099 - app.py[line:147] - INFO: None
+2022-09-20 17:11:10,099 - app.py[line:151] - INFO: fnxjgx
+2022-09-20 17:11:10,201 - app.py[line:163] - INFO: AI handle
+2022-09-20 17:11:10,202 - app.py[line:173] - INFO: {'好': 0, '乐': 0, '哀': 0, '怒': 0, '惧': 0, '恶': 0, '惊': 0}
+2022-09-20 17:11:10,202 - app.py[line:65] - INFO: AI upload
+2022-09-20 17:11:10,203 - app.py[line:103] - ERROR: Ai error: Attempt to convert a value (None) with an unsupported type (<class 'NoneType'>) to a Tensor.
+2022-09-20 17:11:10,203 - app.py[line:180] - INFO: None
+2022-09-20 17:11:10,205 - app.py[line:189] - ERROR: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
