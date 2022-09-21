@@ -1,8 +1,9 @@
 # -*-coding:utf-8-*-
 from datetime import datetime
-import os
+import os, random 
 import logging
 from logging.handlers import RotatingFileHandler
+from re import I
 from imgur_python import Imgur
 from matplotlib import image
 import urllib.request
@@ -57,7 +58,8 @@ def download(file_name, file_url):
         return image_path
     except Exception as e:
         myapp.error("download failed")
-        myapp.error(e)
+        # myapp.error(e)
+        return error(e)
         pass
 
 
@@ -90,6 +92,7 @@ def ai_upload(content_path, style):
         for file in allfile:
             style_path = backup_path
             style_path += file
+
             style_image = load_image(style_path)
             myapp.info("Start transfer")
             file_path = transfer_img(content_image, style_image)
@@ -144,7 +147,11 @@ def submit():
         # download image from imgur
         imgur_path = download(request.args.get('file_name'),
                               request.args.get('file_url'))
+        print("============================================================================")
+        print(request.args.get('file_url'))
         myapp.info(imgur_path)
+        # if(imgur_path == "error"):
+        #     raise Exception 
         emotion_text = request.args.get('emotion_text')
         # 繁轉簡
         emotion_text = cc.convert(emotion_text)
@@ -159,7 +166,8 @@ def submit():
 # 傳給AI處理
 @app.route('/ai_handler/<action>')
 def ai_handler(action):
-    try:
+    try:  
+        haveValue = False
         myapp.info("AI handle")
         # 情緒文字
         emotion_text = request.args.get('emotion_text')
@@ -171,20 +179,25 @@ def ai_handler(action):
         del result["sentences"]
         del result["words"]
         myapp.info(result)
-        # print(reversed(sorted(result.items(), key=lambda x: x[1])))
-        result0 = sorted(result.items(), key=lambda x: x[1])[-1][0]
-        # list1 = (path, result0)
-        # print(list1)
+        #TODO process some emotion text problem
+        for value in result.values():
+            if(value != 0):
+                haveValue = True
+        if(haveValue!=True):
+            num = random.randint(0,6)
+            result0 = list(result.items())[num][0]
+        else:
+            result0 = sorted(result.items(), key=lambda x: x[1])[-1][0]
+
         url = ai_upload(path, result0)
-        # url = "url"
+        if(url == None):
+            raise Exception('url is none')
         myapp.info(url)
+        return url
     except Exception as e:
-        myapp.error("handle error: " + str(e))
-        pass
-    return url
+        # myapp.error("handle error: ")
+        return error(e)
 
-
-@app.errorhandler(Exception)
 def error(e):
     myapp.error(e)
     return '404 Not Found {}'.format(e)
@@ -195,4 +208,5 @@ if __name__ == '__main__':
     setup_logger("API_Backend")
     myapp = logging.getLogger('API_Backend')
     myapp.info("initialize success")
+    app.register_error_handler(404, error)
     app.run(host='0.0.0.0', port=5000)
