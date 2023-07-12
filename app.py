@@ -18,10 +18,10 @@ cc = OpenCC('tw2sp')
 # cnsenti
 emotion = Emotion()
 # imgur setting
-imgur_client = Imgur({'client_id': 'df49f569292a567',
-                      "client_secret": "56f9a51456aeeed047448c8b1753e8b8e4fd0e72",
-                      'account_username': 'ntuejcwang',
-                     "access_token": '1fddc4c11d82df9142c6894ef1005871fcc7edc3'})
+imgur_client = Imgur({'client_id': 'Your_Client_ID',
+                      "client_secret": "Your_Client_Secret",
+                      'account_username': 'Your_Account_Username',
+                     "access_token": 'Your_Access_Token'})
 
 # ai image upload
 
